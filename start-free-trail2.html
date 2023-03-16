@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book-A-Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/Trap_Font_Family/Trap-Regular 400.otf">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
+    <script src="assets/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js "></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script>
+      $(document).on('change keyup', '.required', function(e){
+    let Disabled = true;
+     $(".required").each(function() {
+       let value = this.value
+       if ((value)&&(value.trim() !=''))
+           {
+             Disabled = false
+           }else{
+             Disabled = true
+             return false
+           }
+     });
+    
+    if(Disabled){
+         $('.toggle-disabled').prop("disabled", true);
+       }else{
+         $('.toggle-disabled').prop("disabled", false);
+       }
+  })
+    </script>
+  </head>
+  <body>
+    <div class="book-demo">
+      <div class="container-fluid px-0">
+        <div class="hidden-row">
+          <div class="row pt-4 pb-4">
+            <div class="col-3 pt-3">
+              <a href="" class="">
+                <img src="assets/img/Vector.png" alt="logo" class="logo-none">
+              </a>
+            </div>
+            <div class="col-9">
+              <a href="https://vowellms.com/" class="text-center">
+                <img src="assets/img/Logo.svg" alt="logo" class="logo-none">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row g-0 min-vh-100  hidden-padding">
+          <div class="col-lg-7 left-bg-img">
+            <div class="img-text  d-flex h-100">
+              <a href="index.html" class="back-to-website">Back to website </a>
+              <section class="side-text">
+              
+              <h3>Unleash the workforce potential </h3>
+              <h6>Simplify learning opportunities for your team to help them acquire new skills, enhance productivity, and reach their objectives.</h6>
+              <p>©2021–2023 All Rights Reserved. Vowel® is a registered trademark of The Vowel LMS. Cookie Preferences, Privacy, and Terms.</p>
+              </section>
+          </div>
+          </div>
+          <div class="col-lg-5 right-form mx-auto">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4 logo">
+                  <div class=" pt-5">
+                    <a href="https://vowellms.com/">
+                      <img src="assets/img/Logo.svg" alt="logo" class="logo-none">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-12  pt-10">
+                  <h3 class="form-title pt-5">Start Free Trial Now!</h3>
+                  <p class="sub-title">Discover the ultimate tool for fostering your team's development and growth. </p>
+                  <form class="p-1" action="#" method="post">
+                    <div class="row">
+                      <div class="mb-2 col-lg-6 col-md-6">
+                        <label for="InputFirstName" class="form-label mandatory">First Name</label>
+                        <input type="text" class="form-control border-hover required" id="firstname" placeholder="Type first name" >
+                      </div>
+                      <div class="mb-2 col-lg-6 col-md-6">
+                        <label for="InputLastName" class="form-label mandatory">Last Name</label>
+                        <input type="text" class="form-control border-hover required" id="lastname" placeholder="Type last name">
+                      </div>
+                      <div class="mb-2 col-lg-12 col-md-12">
+                        <label for="InputCompany" class="form-label mandatory">Company</label>
+                        <input type="text" class="form-control border-hover required" id="company" aria-describedby="emailHelp" placeholder="Type company name">
+                      </div>
+                      <div class="mb-2 col-lg-12 col-md-12">
+                        <label for="InputEmail1" class="form-label mandatory">Work Email</label>
+                        <input type="email" class="form-control border-hover required" id="workemail" aria-describedby="emailHelp" placeholder="Type official email ID">
+                      </div>
+                      <div class="mb-2 col-lg-6 col-md-6">
+                        <label for="InputCountry" class="form-label">Country</label>
+                        <select class=" form-select">
+                          <option value="" selected disabled>Select</option>
+                          <option>Westeros</option>
+                          <option>India</option>
+                          <option>Westeros</option>
+                      </select>
+                      </div>
+                      <div class="mb-2 col-lg-6 col-md-6">
+                        <label for="Inputdetails" class="form-label mandatory">Contact Details</label>
+                        <input type="tel" class="form-control border-hover required" id="contact-details" aria-describedby="emailHelp"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Type here">
+                      </div>
+                      <div class="mb-2 col-lg-6 col-md-6">
+                        <label for="InputEmail1" class="form-label">No. of Employees</label>
+                        <select class=" form-select">
+                          <option value="" selected disabled>select</option>
+                          <option>100</option>
+                          <option>500</option>
+                          <option>1000 & Above </option>
+                      </select>
+                      </div>
+                      <div class="mb-3 col-lg-6 col-md-6">
+                        <label for="InputEmail1" class="form-label">Preferred Time Slot</label>
+                        <select class=" form-select">
+                          <option value="" selected disabled>select</option>
+                          <option>9 AM To 2 PM</option>
+                          <option>9 AM To 6 PM</option>
+                          <option>2 PM To 6 PM </option>
+                      </select>
+                      </div>
+                      <div class="row btn-align">
+                        <div class="col-lg-6 col-md-6 mb-3">
+                          <button type="button" class="toggle-disabled btn btn-submit" disabled>Submit</button>
+                        </div>
+                        <div class="col-lg-12 col-md-12 pt-2">
+                          <p class="acknowledge">By clicking 'Submit', you acknowledge that you have read and accept the Terms of Service and Privacy Policy.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--row -->
+      </div>
+      <!--container -->
+    </div>
+
+   
+  </body>
+</html>

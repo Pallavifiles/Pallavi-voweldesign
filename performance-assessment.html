@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book-A-Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
+    <script src="assets/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js "></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script>
+      function modal(){
+       $('.modal').modal('show');
+       setTimeout(function () {
+       	console.log('hejsan');
+       	$('.modal').modal('hide');
+       }, 5000);
+    }
+     </script>
+  </head>
+  <body>
+    <div class="book-demo bg-light">
+      <div class="container ">
+        <div class="hidden-row">
+          <div class="row pt-4 pb-1">
+            <div class="col-3 pt-3 p-4">
+              <a href="" class="">
+                <img src="assets/img/Vector.png" alt="logo" class="logo-none">
+              </a>
+            </div>
+            <div class="col-6">
+              <a href="https://vowellms.com/" class="text-center">
+                <img src="assets/img/Logo.svg" alt="logo" class="logo-none">
+              </a>
+            </div>
+            <div class="col-3 pt-3 >
+              <h6><span class="sub-title2">5 / 6</span></h6>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center p-5 p-mobile-0">
+          <div class="col-lg-4 text-center">
+            <img src="assets/img/Logo.svg" alt="logo" class="logo">
+          </div>
+        </div>
+          <div class="row bg-white bg-padding">
+          <div class="col-lg-6 img-bg">
+            <img src="assets/img/image5-1.png" alt="left-img" class="img-fluid">
+          </div>
+          <div class="col-lg-6 righ-content">
+            <h6>Get to know Vowel <span class="sub-title2">6 / 6</span></h6>
+            <h3 class="title">Maximise performance assessment accuracy </h3>
+            <ul>
+              <li>Central Question Bank </li>
+              <li>Question Navigator for delivering large exams to flag and navigate questions​</li>
+              <li>Rules based automated quiz generater</li>
+              <li>Support for Objective as well as Subjective assessmentss</li>
+            </ul>
+            <div class="row btn-align ">
+              <div class="col-lg-6 col-md-6">
+                <a type="button" class="btn btn-back" href="drag-drop-paste.html">Back</a>
+              </div>
+              <div class="col-lg-6 col-md-6">
+              <button type="button" href="index.html"  data-target="#modal" class="btn btn-next" onclick="modal();">Take me to Dashboard</button> 
+                <!-- <a data-toggle="modal" href="index.html" class="btn btn-next" data-target="#modal" onclick="modal();">Take me to Dashboard</a> -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <footer>
+          <div class="row justify-content-center">
+           <div class="col-lg-8 mb-3">
+           <p class="text-center"> ©2021–2023 All Rights Reserved. Vowel® is a registered trademark of The Vowel LMS.  Cookie Preferences, Privacy, and Terms.</p>
+          </div>
+          </div>
+        </footer>
+
+
+        <div class="modal fade bd-example-modal-lg" data-backdrop="static" data-keyboard="false" tabindex="-1">
+          <div class="modal-dialog modal-sm">
+              <div class="modal-content loading-box" >
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12">
+                     <h6>Loading ...</h6>
+                     <img src="assets/img/Rectangle.png">
+                     <h6>Take a deep breath & get ready for the learning experience workspace.</h6>
+                     <h6>Don't press back in the browser</h6>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+          </div>
+      </div>
+ 
+      </div>
+      <!--container -->
+    </div>
+    
+
+  </body>
+</html>

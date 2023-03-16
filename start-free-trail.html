@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book-A-Demo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="assets/Trap_Font_Family/Trap-Regular 400.otf">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="assets/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js "></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <div class="book-demo">
+      <div class="container-fluid px-0">
+        <div class="hidden-row">
+          <div class="row pt-4 pb-4">
+            <div class="col-3 pt-3 p-4">
+              <a href="" class="">
+                <img src="assets/img/Vector.png" alt="logo" class="logo-none" />
+              </a>
+            </div>
+            <div class="col-9">
+              <a href="https://vowellms.com/" class="text-center">
+                <img src="assets/img/Logo.svg" alt="logo" class="logo-none" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row g-0 min-vh-100  hidden-padding" >
+          <div class="col-lg-7 left-bg-img">
+            <div class="img-text d-flex h-100">
+              <a href="index.html" class="back-to-website">Back to website </a>
+              <section class="side-text">
+              
+              <h3>Unleash the workforce potential </h3>
+              <h6>Simplify learning opportunities for your team to help them acquire new skills, enhance productivity, and reach their objectives.</h6>
+              <p>©2021–2023 All Rights Reserved. Vowel® is a registered trademark of The Vowel LMS. Cookie Preferences, Privacy, and Terms.</p>
+              </section>
+          </div>
+          </div>
+          <div class="col-lg-5 right-form">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4 logo">
+                  <div class="pt-5">
+                    <a href="https://vowellms.com/">
+                      <img
+                        src="assets/img/Logo.svg"
+                        alt="logo"
+                        class="logo-none"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-12 pt-10 free-trail mb-10">
+                  <h3 class="form-title pt-5">Start Free Trial</h3>
+                  <p class="sub-title">
+                    Experience Vowel offerings by taking advantageof a free
+                    trial. Begin exploring the features today.
+                  </p>
+                  <form class="p-1" action="#" method="post">
+                    <div class="row align-captcha">
+                      <div class="mb-4 col-lg-6 col-md-6">
+                        <form action="#" class="form">
+                          <div id="captcha" class="form_div">
+                            <div class="captcha_form mb-4">
+                              <label
+                                for="InpuCaptcha"
+                                class="form-label form_label_captcha"
+                                >Input Captcha</label
+                              >
+                              <input
+                                type="text"
+                                class="form_input_captcha form-control border-hover required"
+                                id="captcha_form"
+                                placeholder="Type here"
+                              />
+                            </div>
+                            <div class="preview"></div>
+                            <label class="captcha_refersh form-label">
+                              Refresh Captcha
+                            </label>
+                          </div>
+
+                          <input
+                            type="submit"
+                            class="form_button btn btn-submit"
+                            value="submit"
+                          />
+                        </form>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--row -->
+      </div>
+      <!--container -->
+    </div>
+
+    <script>
+      (function () {
+        const fonts = ["cursive"];
+        let captchaValue = "";
+        function gencaptcha() {
+          let value = btoa(Math.random() * 1000000000);
+          value = value.substr(0, 5 + Math.random() * 5);
+          captchaValue = value;
+        }
+
+        function setcaptcha() {
+          let html = captchaValue
+            .split("")
+            .map((char) => {
+              const rotate = -20 + Math.trunc(Math.random() * 30);
+              const font = Math.trunc(Math.random() * fonts.length);
+              return `<span
+              style="
+              transform:rotate(${rotate}deg);
+              font-family:${font[font]};
+              "
+             >${char} </span>`;
+            })
+            .join("");
+          document.querySelector("#captcha .preview").innerHTML = html;
+        }
+
+        function initCaptcha() {
+          document
+            .querySelector(" #captcha .captcha_refersh")
+            .addEventListener("click", function () {
+              gencaptcha();
+              setcaptcha();
+            });
+
+          gencaptcha();
+          setcaptcha();
+        }
+        initCaptcha();
+
+        document
+          .querySelector(" .form_button")
+          .addEventListener("click", function () {
+            let inputcaptchavalue =
+              document.querySelector("#captcha input").value;
+
+            if (inputcaptchavalue === captchaValue) {
+              // swal("","Log in","success");
+              alert("Log in success");
+            } else {
+              // swal("Invalid Captcha");
+              alert("Invalid Captcha");
+            }
+          });
+      })();
+    </script>
+  </body>
+</html>

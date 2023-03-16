@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book-A-Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/Trap_Font_Family/Trap-Regular 400.otf">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
+    <script src="assets/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js "></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script>
+      $(document).on('change keyup', '.required', function(e){
+    let Disabled = true;
+     $(".required").each(function() {
+       let value = this.value
+       if ((value)&&(value.trim() !=''))
+           {
+             Disabled = false
+           }else{
+             Disabled = true
+             return false
+           }
+     });
+    
+    if(Disabled){
+         $('.toggle-disabled').prop("disabled", true);
+       }else{
+         $('.toggle-disabled').prop("disabled", false);
+       }
+  })
+    </script>
+  </head>
+  <body>
+    <div class="book-demo">
+    <div class="container-fluid">
+      <div class="hidden-row">
+        <div class="row pt-4 pb-4">
+          <div class="col-3 pt-3 p-4">
+            <!-- <a href="" class="">
+              <img src="assets/img/Vector.png" alt="logo" class="logo-none" />
+            </a> -->
+          </div>
+          <div class="col-9">
+            <a href="https://vowellms.com/" class="text-center">
+              <img src="assets/img/Logo.svg" alt="logo" class="logo-none" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-7 signin-bg">
+         <div class="signin-img-text">
+       <img src="assets/img/Shape-rec.png" class="rec-shape">
+          <h3>Get Inspired to learn more with Vowel's Gamified Collaboration Platform</h3>
+          <p>©2021–2023 All Rights Reserved. Vowel® is a registered trademark of The Vowel LMS. Cookie Preferences, Privacy, and Terms.</p>
+
+         </div>
+        </div>
+        <div class="col-lg-5 right-form">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 logo">
+                <div class=" pt-3">
+                  <a href="https://vowellms.com/">
+                    <img src="assets/img/Logo.svg" alt="logo" class="logo-none">
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-12 tagline">
+              <a href="">Learning Management Experience</a>
+              </div>
+              <div class="col-lg-12  pt-4">
+                <h3 class="form-title pt-5">Sign In</h3>
+                <p class="sub-title">Discover the ultimate tool for fostering your team's development and growth. </p>
+                <form class="p-1" action="#" method="post">
+                  <div class="row">
+                    <div class="mb-2 col-lg-9 col-md-12">
+                      <label for="InputUserName" class="form-label">Username</label>
+                      <input type="text" class="form-control border-hover required" id="firstname" placeholder="Your official e-mail ID here" >
+                    </div>
+                    <div class="mb-3 col-lg-9 col-md-12">
+                      <label for="InputPassword" class="form-label">Password</label>
+                      <input type="password" class="form-control border-hover required" id="lastname" placeholder="Type password">
+                    </div>
+                    <div class="mb-5 col-lg-9 col-md-12">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                    </div>
+                    <div class="row btn-align">
+                      <div class="col-lg-6 col-md-6">
+                        <button type="button" class="toggle-disabled btn btn-submit" disabled>Submit</button>
+                      </div>
+                      <div class="col-lg-6 col-md-6">
+                        <button type="button" class=" btn reset-btn">Reset Password</button>
+                      </div>
+                    
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+      <!--container -->
+    </div>
+
+   
+  </body>
+</html>
